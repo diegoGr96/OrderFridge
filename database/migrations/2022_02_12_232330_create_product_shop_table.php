@@ -14,12 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_shop', function (Blueprint $table) {
-            $table->id();
-
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->foreignId('shop_id')->constrained()->onDelete('cascade');
 
-            $table->float('final_price');
+            $table->float('price');
             $table->timestamps();
             $table->softDeletes();
         });

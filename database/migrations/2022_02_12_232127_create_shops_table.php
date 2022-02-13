@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('logo', '500');
+            $table->string('logo', '500')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
