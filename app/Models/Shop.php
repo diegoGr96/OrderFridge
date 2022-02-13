@@ -16,11 +16,11 @@ class Shop extends Model
 
     public function products()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class)->withPivot('price');
     }
 
     public function sales()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(Sale::class);
     }
 }

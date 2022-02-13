@@ -15,11 +15,16 @@ class Product extends Model
 
     public function shops()
     {
-        return $this->belongsToMany(Shop::class);
+        return $this->belongsToMany(Shop::class)->withPivot('price');
     }
 
     public function sales()
     {
         return $this->belongsToMany(Sale::class);
+    }
+
+    public function fridges()
+    {
+        return $this->belongsToMany(Fridge::class)->withPivot('units');
     }
 }

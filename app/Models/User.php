@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function fridges()
     {
-        return $this->belongsToMany(Fridge::class);
+        return $this->belongsToMany(Fridge::class)->withPivot('user_role_level');
     }
 }
