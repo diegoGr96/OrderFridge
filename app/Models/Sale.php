@@ -18,6 +18,11 @@ class Sale extends Model
 
     public function shop()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Shop::class);
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
     }
 }
