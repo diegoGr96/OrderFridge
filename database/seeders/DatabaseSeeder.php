@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             FridgeUserSeeder::class,
             FridgeProductSeeder::class,
             ProductShopSeeder::class,
+            RoleSeeder::class,
+            RoleUserSeeder::class,
         ]);
     }
 }
